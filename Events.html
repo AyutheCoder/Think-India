@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Image Slider</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <style>
+    body {
+    background-image: url("https://media.istockphoto.com/photos/award-sparkling-background-picture-id1220754002?b=1&k=20&m=1220754002&s=170667a&w=0&h=pV5JKXJ7DmdJM8i662txIBFdG2pYrr-my4HlXqPFPNU=");
+    background-size: cover;
+    background-position:top;
+    align-content: center;
+    margin-top:5px;
+    padding: 0;
+    perspective: 1000px;
+  }
+  .logo{
+    margin-left:-230px;
+    margin-right: 200px;
+}
+  .slider {
+    width: 80%;
+    height: 300px;
+    margin: 50px auto;
+    margin-right:330px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    margin-top: 120px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide:nth-child(1) {
+    transform: rotateY(0deg) translateZ(260px);
+  }
+  .slide:nth-child(2) {
+    transform: rotateY(90deg) translateZ(260px);
+  }
+  .slide:nth-child(3) {
+    transform: rotateY(180deg) translateZ(260px);
+  }
+  .slide:nth-child(4) {
+    transform: rotateY(270deg) translateZ(260px);
+  }
+  
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  </style>
+  <div class="logo">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.2jMoKWSUZ3o0sFMQqiJUKQAAAA&pid=Api&P=0&h=220" width="80px" height="80px">
+</div>
+  <div class="slider">
+    <div class="slide">
+      <img src="https://media.licdn.com/dms/image/D4D22AQGNnH1uMpALgg/feedshare-shrink_800/0/1706855447815?e=2147483647&v=beta&t=rNiYbfZWAyL7zqGil0CKSQHbcZjxP_BycXp1cK4v_Ws" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="https://media.licdn.com/dms/image/D4D22AQF7xxT8J_Z9Sw/feedshare-shrink_800/0/1706855655117?e=2147483647&v=beta&t=zCNQu1cPOhWW3EjsAVgrnzCMvscx4ZA3_-wFPCoGQ5M" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="https://media.licdn.com/dms/image/D4D22AQEljx7_ChWSOQ/feedshare-shrink_2048_1536/0/1694279609157?e=2147483647&v=beta&t=HtleerBtMDiIB2siJZSkrYpOi8p1r2l7OzC0rUFChl0" alt="Image 3">
+    </div>
+    <div class="slide">
+        <img src="https://media.licdn.com/dms/image/D4D22AQFttL46dlrFLw/feedshare-shrink_2048_1536/0/1696768516931?e=2147483647&v=beta&t=d2Lbq1JqBsEyvzwIjiY17H9-TrJ-k-xx_iEM0AoKhtE" alt="Image 4">
+      </div>
+      <!-- <div class="slide">
+        <img src="C:\Users\Lenovo\Desktop\Byteverse\volunteers-giving-food-to-poor-people-volunteers-giving-food-to-poor-people-indoors-160383499.webp" alt="Image 5">
+      </div> -->
+    <div class="slide">
+        <img src="https://media.licdn.com/dms/image/D4D22AQG0qvgtKl07mA/feedshare-shrink_2048_1536/0/1713786368016?e=2147483647&v=beta&t=f62iUWuoG1LZEATHwUdf-HQphm1fkm9nDfkhZNa8ljA" alt="Image 4">
+    </div>
+  </div>
+</body>
+</html>
